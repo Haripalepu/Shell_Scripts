@@ -2,7 +2,7 @@
 
 file=/etc/passwd
 
-if [ ! -f $file ] # !=Not, -d=directory
+if [ ! -f $file ] # !=Not, -f=file
 then 
    echo "Source directory: $file doesn't exits"
 fi
@@ -16,3 +16,6 @@ do
   echo "ID: $user_id"
   echo "GroupID: $group_id"
 done < $file
+
+#IFS=Interanl Field Seperator
+#Script to seperate the : and filter the username & password from /etc/passwd
